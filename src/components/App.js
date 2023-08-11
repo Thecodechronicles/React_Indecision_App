@@ -9,7 +9,7 @@ export default class App extends React.Component {
         this.params = {
             appInfo: {
                 title: 'Indecision App',
-                subtitle: 'This computer wil help you in decision making',
+                subtitle: 'This computer will help you in decision making',
             },
         }
 

@@ -58,13 +58,20 @@ export default class Form extends React.Component {
         const { params, appInfo } = propObj;
 
         return (
-            <div>
-                {this.state.error && <p className="error-message">{this.errorMessage}</p>}
-                <form className="form" onSubmit={this.formHandlerProxy}>
-                    <input className="form-input" type="text" name="option" />
-                    <button className="button">Add Option {++this.randomProp}</button>
-                </form>
-            </div>
+            // <div>
+            //     {this.state.error && <p className="error-message">{this.errorMessage}</p>}
+            //     <form className="form" onSubmit={this.formHandlerProxy}>
+            //         <input className="form-input" type="text" name="option" />
+            //         <button className="button">Add Option {++this.randomProp}</button>
+            //     </form>
+            // </div>
+
+            [this.state.error && <p className="error-message">{this.errorMessage}</p>,
+            <form className="form" onSubmit={this.formHandlerProxy}>
+                <input className="form-input" type="text" name="option" />
+                <button className="button">Add Option {++this.randomProp}</button>
+            </form>]  // If the <div> is to be wrtten inside of an array coz React renders each element one-by-one..... 
+            // .....inside of an array
         );
     }
 }

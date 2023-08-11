@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --watch",
     "build-babel": "babel ./src/appOne.js --out-file=./public/scripts/appOne.js --presets=env,react --watch",
+    "build-babel:simple": "babel ./src/app-simpleV1.js --out-file=./public/scripts/app-simpleV1-new.js --presets=env,react --watch",
     "build-babel-cp": "babel --plugins transform-class-properties ./src/appOne.js --out-file=./public/scripts/appOne.js --presets=env,react --watch",
     "build-babel-appSimple": "babel ./src/app-simpleV2.js --out-file=./public/scripts/app-simpleV2.js --presets=env,react --watch",
     "dev-server": "webpack-dev-server",
